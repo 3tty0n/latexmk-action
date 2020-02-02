@@ -1,0 +1,16 @@
+# action.yml
+name: 'GitHub Action for LaTeX customized for 3tty0n'
+description: 'GitHub Action to compile LaTeX documents'
+author: Yusuke Izawa
+inputs:
+  root_file:
+    description: The root LaTeX file to be compiled
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  args:
+    - ${{ inputs.root_file }}
+branding:
+  icon: book
+  color: black
