@@ -5,8 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to compile a LaTeX document
     steps:
+      # To use this repository's private action, you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - uses: ./ # Uses an action in the root directory
       - name: A job to compile a simple LaTeX document
         id: simple1
-        uses: actions/latexmk-action@v1
+        uses: 3tty0n/latexmk-action@v1
         with:
           root_file: main.tex
