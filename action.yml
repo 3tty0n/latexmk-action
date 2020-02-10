@@ -6,11 +6,15 @@ inputs:
   root_file:
     description: The root LaTeX file to be compiled
     required: true
+  args:
+    description: Arguments passed to latexmk
+    required: false
 runs:
   using: docker
   image: Dockerfile
   args:
     - ${{ inputs.root_file }}
+    - ${{ inputs.args }}
 branding:
   icon: book
   color: black

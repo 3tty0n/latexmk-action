@@ -14,3 +14,4 @@ jobs:
         uses: 3tty0n/latexmk-action@v1
         with:
           root_file: main.tex
+          args: -pdfxe
