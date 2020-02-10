@@ -1,4 +1,4 @@
-name: Testing My GitHub Actions
+name: Testing Github Action
 on: [push, pull_request]
 jobs:
   compile_latex:
