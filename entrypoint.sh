@@ -3,4 +3,8 @@
 root_file="$1"
 args="$2"
 
-latexmk "$args" "$root_file"
+echo "Compiling LaTeX sources..."
+latexmk -gg "$args" "$root_file"
+
+echo "Compiled assets: $(realpath main.pdf)"
+echo ""

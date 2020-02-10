@@ -8,14 +8,12 @@ jobs:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - uses: ./ # Uses an action in the root directory
-      - name: A job to compile a simple LaTeX document
-        uses: 3tty0n/latexmk-action@v1
+      - name: Compiling
+        uses: 3tty0n/latexmk-action@master
         with:
           root_file: main.tex
           args: -pdfxe
-      - name: Uploading
-        uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v1
         with:
           name: main.pdf
           path: main.pdf
