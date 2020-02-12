@@ -11,6 +11,7 @@ GitHub Action to compile LaTeX documents using `latexmk`.
     The root LaTeX file to be compiled. This input is required.
 
 * `args`:
+
     The extra arguments to be passed to the LaTeX engine.
 
     By default, it is `-pdf -shell-escape -file-line-error -interaction=nonstopmode`.
