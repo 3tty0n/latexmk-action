@@ -33,7 +33,7 @@ jobs:
       - name: Set up Git repository
         uses: actions/checkout@v1
       - name: Compile LaTeX document
-        uses: 3tty0n/latex-action@master
+        uses: 3tty0n/latexmk-action@master
         with:
           root_file: main.tex
 ```
