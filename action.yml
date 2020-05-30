@@ -9,6 +9,9 @@ inputs:
   args:
     description: Arguments passed to latexmk
     required: false
+  working_dir:
+    description: The place of your LaTeX file
+    required: true
 runs:
   using: docker
   image: Dockerfile
