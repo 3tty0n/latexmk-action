@@ -15,6 +15,7 @@ runs:
   args:
     - ${{ inputs.root_file }}
     - ${{ inputs.args }}
+    - ${{ inputs.working_dir }}
 branding:
   icon: book
   color: black

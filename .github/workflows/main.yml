@@ -13,7 +13,8 @@ jobs:
         with:
           root_file: main.tex
           args: -pdfxe
+          working_dir: test
       - uses: actions/upload-artifact@v1
         with:
           name: main.pdf
-          path: main.pdf
+          path: test/main.pdf
