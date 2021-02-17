@@ -20,9 +20,7 @@ jobs:
           root_file: main-ja.tex
           args: -pdflua
           working_dir: test
-          extra_packages: |
-            fonts-noto-cjk
-            fonts-noto-cjk-extra
+          extra_packages: fonts-noto-cjk
       - uses: actions/upload-artifact@v1
         with:
           name: main.pdf
