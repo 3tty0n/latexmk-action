@@ -8,11 +8,17 @@ jobs:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Compiling
+      - name: Simple compiling test
         uses: 3tty0n/latexmk-action@master
         with:
           root_file: main.tex
           args: -pdfxe
+          working_dir: test
+      - name: Compiling a TeX file written in Japanese with LuaLaTex
+        uses: 3tty0n/latexmk-action@master
+        with:
+          root_file: main-ja.tex
+          args: -pdflua
           working_dir: test
       - uses: actions/upload-artifact@v1
         with:
