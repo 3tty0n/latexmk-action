@@ -12,6 +12,9 @@ inputs:
   working_dir:
     description: The place of your LaTeX file
     required: true
+  extra_packages:
+    description: Extra packages you need
+    required: false
 runs:
   using: docker
   image: Dockerfile
@@ -19,6 +22,7 @@ runs:
     - ${{ inputs.root_file }}
     - ${{ inputs.args }}
     - ${{ inputs.working_dir }}
+    - ${{ inputs.extra_packages }}
 branding:
   icon: book
   color: black

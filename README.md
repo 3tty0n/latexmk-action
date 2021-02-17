@@ -23,6 +23,10 @@ GitHub Action to compile LaTeX documents using `latexmk`.
 
     The workspace where the `latexmk` command is executed.
 
+* `extra_packages`:
+
+    Extra packages you need.
+
 ## Example
 
 Put `main.yml` containing the following at `.github/workflows` directory.
