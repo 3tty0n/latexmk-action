@@ -6,15 +6,23 @@ working_dir="$3"
 default_args="-gg -pdf -shell-escape -file-line-error -interaction=nonstopmode"
 
 if [ -n "$working_dir" ]; then
-  cd "$working_dir"
+  cd "$working_dir" || exit 1
 fi
 
 echo "Compiling LaTeX sources..."
 echo ""
 if [ -z "$args" ]; then
-  latexmk "$default_args" "$root_file"
+  if ! latexmk "$default_args" "$root_file"; then
+    echo "Compilation failed."
+    echo ""
+    exit 1
+  fi
 else
-  latexmk "$args" "$root_file"
+  if ! latexmk "$args" "$root_file"; then
+    echo "Compilation failed."
+    echo ""
+    exit 1
+  fi
 fi
 
 echo "Compiled assets: $(realpath main.pdf)"
