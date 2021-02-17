@@ -19,6 +19,10 @@ GitHub Action to compile LaTeX documents using `latexmk`.
 
     Refer to [`latexmk` document](http://texdoc.net/texmf-dist/doc/support/latexmk/latexmk.pdf) for more information.
 
+* `working_dir`:
+
+    The workspace where the `latexmk` command is executed.
+
 ## Example
 
 Put `main.yml` containing the following at `.github/workflows` directory.
