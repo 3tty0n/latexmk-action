@@ -8,7 +8,10 @@ default_args="-gg -pdf -shell-escape -file-line-error -interaction=nonstopmode"
 
 if [ -n "$extra_packages" ]; then
   apt update
-  apt install -y "$extra_packages"
+  for pkg in $extra_packages; do
+    echo "Insalling $pkg ..."
+    apt install -y "$pkg"
+  done
 fi
 
 if [ -n "$working_dir" ]; then
